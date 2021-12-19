@@ -1,0 +1,94 @@
+<template>
+  <div>
+    <Entry
+      :entryCountry="country || entryCountry"
+      :entryNumber="number || entryNumber"
+      :isValid="isValid"
+      @enteredCountry="enteredCountry"
+      @enteredNumber="enteredNumber"
+    />
+    <Buttons
+      :isValid="isValid"
+      :country="country || ''"
+      :countryCallingCode="countryCallingCode || ''"
+      :number="number || ''"
+      :nationalNumber="nationalNumber || ''"
+    />
+  </div>
+</template>
+
+<script>
+import {
+  getCountryCallingCode,
+  parsePhoneNumber,
+} from 'libphonenumber-js/mobile';
+
+import Buttons from './components/Buttons.vue';
+import Entry from './components/Entry.vue';
+import conf from './conf';
+
+export default {
+  name: 'App',
+  components: {
+    Buttons,
+    Entry,
+  },
+  data: () => ({
+    entryCountry: '',
+    entryNumber: '',
+    labelByCountry: true,
+  }),
+  computed: {
+    object() {
+      try {
+        return parsePhoneNumber(this.entryNumber, {
+          defaultCountry: this.entryCountry, extract: true,
+        });
+      } catch (ex) {
+        return null;
+      }
+    },
+    isValid() {
+      return !!this.object && this.object.isValid();
+    },
+    country() {
+      return this.isValid ? this.object.country : null;
+    },
+    countryCallingCode() {
+      return this.isValid ? this.object.countryCallingCode : null;
+    },
+    number() {
+      return this.isValid ? this.object.number : null;
+    },
+    nationalNumber() {
+      return this.isValid ? this.object.nationalNumber : null;
+    },
+  },
+  methods: {
+    validCountry(value) {
+      try {
+        const country = value.toUpperCase();
+        getCountryCallingCode(country);
+        return country;
+      } catch (ex) {
+        return conf.defaultCountry;
+      }
+    },
+    enteredCountry(value) {
+      this.entryCountry = this.validCountry(value);
+    },
+    enteredNumber(value) {
+      this.entryNumber = (value || '');
+    },
+  },
+  created() {
+    const params = new URLSearchParams(window.location.search);
+    this.enteredCountry(params.get('c'));
+    this.enteredNumber(params.get('n'));
+  },
+};
+</script>
+
+<style lang="scss">
+  @import "~bulma/bulma.sass";
+</style>
