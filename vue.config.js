@@ -3,6 +3,8 @@ const path = require('path');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 
 module.exports = {
+  productionSourceMap: false,
+
   configureWebpack: {
     plugins: [
       new PurgecssPlugin({
@@ -13,5 +15,12 @@ module.exports = {
         ]),
       }),
     ],
+
+    optimization: {
+      splitChunks: {
+        minSize: 10000,
+        maxSize: 250000,
+      },
+    },
   },
 };
