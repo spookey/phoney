@@ -34,7 +34,7 @@
         <div
           class="button is-medium"
           :class="errorClass"
-          @click="labelByCountry = !labelByCountry"
+          @click="theClick"
         >
           <span class="icon is-small">
             <Icon
@@ -93,15 +93,25 @@ export default {
       return this.isValid ? '' : conf.errorClass;
     },
     theIcon() {
-      return ['fas', this.isValid ? 'wrench' : 'paint-brush'];
+      return ['fas', this.isValid ? 'trash' : 'paint-brush'];
     },
   },
   methods: {
+    emitEnteredNumber(value) {
+      this.$emit('enteredNumber', value);
+    },
     enteredCountry(event) {
       this.$emit('enteredCountry', event.target.value);
     },
     enteredNumber(event) {
-      this.$emit('enteredNumber', event.target.value);
+      this.emitEnteredNumber(event.target.value);
+    },
+    theClick() {
+      if (this.isValid) {
+        this.emitEnteredNumber('');
+      } else {
+        this.labelByCountry = !this.labelByCountry;
+      }
     },
   },
 };

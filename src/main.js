@@ -3,7 +3,7 @@ import {
   faPaintBrush,
   faPhone,
   faSms,
-  faWrench,
+  faTrash,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faSkype,
@@ -23,9 +23,9 @@ library.add(
   faPhone,
   faSkype,
   faSms,
+  faTrash,
   faViber,
   faWhatsapp,
-  faWrench,
 );
 Vue.component('Icon', FontAwesomeIcon);
 
