@@ -21,14 +21,16 @@
         </span>
       </div>
       <div class="control is-expanded">
-        <input
-          class="input is-medium"
-          :class="errorClass"
-          placeholder="number"
-          type="tel"
-          :value="entryNumber"
-          @input="enteredNumber"
-        />
+        <label for="number-input">
+          <input
+            class="input is-medium"
+            :class="errorClass"
+            placeholder="number"
+            type="tel"
+            :value="entryNumber"
+            @input="enteredNumber"
+          />
+        </label>
       </div>
       <div class="control">
         <div
