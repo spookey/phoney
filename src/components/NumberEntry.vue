@@ -35,6 +35,7 @@
           class="button is-medium"
           :class="errorClass"
           @click="theClick"
+          @keyup="theClick"
         >
           <span class="icon is-small">
             <FaIcon
