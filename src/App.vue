@@ -1,13 +1,13 @@
 <template>
   <div>
-    <Entry
+    <NumberEntry
       :entryCountry="country || entryCountry"
       :entryNumber="number || entryNumber"
       :isValid="isValid"
       @enteredCountry="enteredCountry"
       @enteredNumber="enteredNumber"
     />
-    <Buttons
+    <ActionButtons
       :isValid="isValid"
       :country="country || ''"
       :countryCallingCode="countryCallingCode || ''"
@@ -23,15 +23,15 @@ import {
   parsePhoneNumber,
 } from 'libphonenumber-js/mobile';
 
-import Buttons from './components/Buttons.vue';
-import Entry from './components/Entry.vue';
+import ActionButtons from './components/ActionButtons.vue';
+import NumberEntry from './components/NumberEntry.vue';
 import conf from './conf';
 
 export default {
   name: 'App',
   components: {
-    Buttons,
-    Entry,
+    ActionButtons,
+    NumberEntry,
   },
   data: () => ({
     entryCountry: '',

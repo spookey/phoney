@@ -37,7 +37,7 @@
           @click="theClick"
         >
           <span class="icon is-small">
-            <Icon
+            <FaIcon
               :icon="theIcon"
             />
           </span>
@@ -56,7 +56,7 @@ import {
 import conf from '../conf';
 
 export default {
-  name: 'Entry',
+  name: 'NumberEntry',
   props: {
     entryCountry: {
       type: String,

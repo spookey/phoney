@@ -27,7 +27,7 @@ library.add(
   faViber,
   faWhatsapp,
 );
-Vue.component('Icon', FontAwesomeIcon);
+Vue.component('FaIcon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 

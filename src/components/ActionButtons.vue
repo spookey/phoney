@@ -12,7 +12,7 @@
           target="_blank"
         >
           <span class="icon is-small">
-            <Icon
+            <FaIcon
               :icon="elem.icon"
             />
           </span>
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'Buttons',
+  name: 'ActionButtons',
   props: {
     isValid: {
       type: Boolean,
@@ -57,27 +57,33 @@ export default {
       if (!this.isValid) { return []; }
       return [
         make(
-          'Phone', ['fas', 'phone'],
+          'Phone',
+          ['fas', 'phone'],
           `tel:${this.number}`,
         ),
         make(
-          'SMS', ['fas', 'sms'],
+          'SMS',
+          ['fas', 'sms'],
           `sms:${this.number}`,
         ),
         make(
-          'Fax', ['fas', 'fax'],
+          'Fax',
+          ['fas', 'fax'],
           `fax:${this.number}`,
         ),
         make(
-          'WhatsApp', ['fab', 'whatsapp'],
+          'WhatsApp',
+          ['fab', 'whatsapp'],
           `whatsapp://send?phone=${this.countryCallingCode}${this.nationalNumber}`,
         ),
         make(
-          'Viber', ['fab', 'viber'],
+          'Viber',
+          ['fab', 'viber'],
           `viber://chat/?number=${encodeURIComponent(this.number)}`,
         ),
         make(
-          'Skype', ['fab', 'skype'],
+          'Skype',
+          ['fab', 'skype'],
           `skype:${this.number}`,
         ),
       ];
