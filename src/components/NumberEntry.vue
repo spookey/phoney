@@ -27,6 +27,7 @@
             :class="errorClass"
             placeholder="number"
             type="tel"
+            ref="numberInput"
             :value="entryNumber"
             @input="enteredNumber"
           />
@@ -116,6 +117,9 @@ export default {
         this.labelByCountry = !this.labelByCountry;
       }
     },
+  },
+  mounted() {
+    this.$refs.numberInput.focus();
   },
 };
 </script>
