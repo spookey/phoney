@@ -17,7 +17,7 @@ indent_size = 2
 indent_style = space
 max_line_length = 100
 
-[*.json]
+[*.{json,webmanifest}]
 indent_size = 2
 indent_style = space
 
