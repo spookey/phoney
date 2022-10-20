@@ -6,18 +6,20 @@
           class="select is-medium"
           :class="errorClass"
         >
-          <select
-            @change="enteredCountry"
-          >
-            <option
-              v-for="opt in countryOptions"
-              :key="opt.value"
-              :value="opt.value"
-              :selected="opt.selected"
+          <label for="country-select">
+            <select
+              @change="enteredCountry"
             >
-              {{ opt.label }}
-            </option>
-          </select>
+              <option
+                v-for="opt in countryOptions"
+                :key="opt.value"
+                :value="opt.value"
+                :selected="opt.selected"
+              >
+                {{ opt.label }}
+              </option>
+            </select>
+          </label>
         </span>
       </div>
       <div class="control is-expanded">
@@ -97,7 +99,8 @@ export default {
       return this.isValid ? '' : conf.errorClass;
     },
     theIcon() {
-      return ['fas', this.isValid ? 'trash' : 'paint-brush'];
+      if (this.isValid) { return 'fa-solid fa-trash'; }
+      return 'fa-solid fa-paint-brush';
     },
   },
   methods: {

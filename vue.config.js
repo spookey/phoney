@@ -1,13 +1,13 @@
 const glob = require('glob-all');
 const path = require('path');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
+const { PurgeCSSPlugin } = require('purgecss-webpack-plugin');
 
 module.exports = {
   productionSourceMap: false,
 
   configureWebpack: {
     plugins: [
-      new PurgecssPlugin({
+      new PurgeCSSPlugin({
         paths: glob.sync([
           path.join(__dirname, 'public', 'index.html'),
           path.join(__dirname, 'src', '**', '*.vue'),

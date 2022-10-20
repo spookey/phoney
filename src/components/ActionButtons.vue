@@ -10,6 +10,7 @@
           class="button is-medium is-fullwidth"
           :href="elem.href"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <span class="icon is-small">
             <FaIcon
@@ -58,32 +59,32 @@ export default {
       return [
         make(
           'Phone',
-          ['fas', 'phone'],
+          'fa-solid fa-phone',
           `tel:${this.number}`,
         ),
         make(
           'SMS',
-          ['fas', 'sms'],
+          'fa-solid fa-sms',
           `sms:${this.number}`,
         ),
         make(
           'Fax',
-          ['fas', 'fax'],
+          'fa-solid fa-fax',
           `fax:${this.number}`,
         ),
         make(
           'WhatsApp',
-          ['fab', 'whatsapp'],
+          'fa-brands fa-whatsapp',
           `whatsapp://send?phone=${this.countryCallingCode}${this.nationalNumber}`,
         ),
         make(
           'Viber',
-          ['fab', 'viber'],
+          'fa-brands fa-viber',
           `viber://chat/?number=${encodeURIComponent(this.number)}`,
         ),
         make(
           'Skype',
-          ['fab', 'skype'],
+          'fa-brands fa-skype',
           `skype:${this.number}`,
         ),
       ];

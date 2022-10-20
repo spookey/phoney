@@ -14,7 +14,7 @@ import {
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-import Vue from 'vue';
+import { createApp } from 'vue';
 import App from './App.vue';
 
 library.add(
@@ -27,10 +27,7 @@ library.add(
   faViber,
   faWhatsapp,
 );
-Vue.component('FaIcon', FontAwesomeIcon);
 
-Vue.config.productionTip = false;
-
-new Vue({
-  render: (h) => h(App),
-}).$mount('#app');
+createApp(App)
+  .component('FaIcon', FontAwesomeIcon)
+  .mount('#app');
