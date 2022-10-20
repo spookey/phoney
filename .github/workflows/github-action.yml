@@ -6,10 +6,10 @@ jobs:
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Setup
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: 'lts/*'
         cache: 'yarn'
@@ -24,7 +24,7 @@ jobs:
       run: yarn run build
 
     - name: Archive
-      uses: thedoctor0/zip-release@master
+      uses: thedoctor0/zip-release@main
       if: startsWith(github.ref, 'refs/tags/')
       with:
         type: tar
@@ -32,7 +32,7 @@ jobs:
         path: dist/
 
     - name: Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v1  # ¯\_(ツ)_/¯
       if: startsWith(github.ref, 'refs/tags/')
       with:
         fail_on_unmatched_files: true
