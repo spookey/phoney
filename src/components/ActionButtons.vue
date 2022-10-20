@@ -1,8 +1,8 @@
 <template>
   <div class="content">
-    <div class="columns is-multiline">
+    <div class="columns is-mobile is-multiline">
       <div
-        class="column is-full"
+        class="column is-half"
         v-for="elem in linkButtons"
         :key="elem.href"
       >
@@ -63,24 +63,24 @@ export default {
           `tel:${this.number}`,
         ),
         make(
-          'SMS',
-          'fa-solid fa-sms',
-          `sms:${this.number}`,
-        ),
-        make(
-          'Fax',
-          'fa-solid fa-fax',
-          `fax:${this.number}`,
-        ),
-        make(
           'WhatsApp',
           'fa-brands fa-whatsapp',
           `whatsapp://send?phone=${this.countryCallingCode}${this.nationalNumber}`,
         ),
         make(
+          'SMS',
+          'fa-solid fa-sms',
+          `sms:${this.number}`,
+        ),
+        make(
           'Viber',
           'fa-brands fa-viber',
           `viber://chat/?number=${encodeURIComponent(this.number)}`,
+        ),
+        make(
+          'Fax',
+          'fa-solid fa-fax',
+          `fax:${this.number}`,
         ),
         make(
           'Skype',
