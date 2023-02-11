@@ -32,7 +32,7 @@ jobs:
         path: dist/
 
     - name: Release
-      uses: softprops/action-gh-release@v1  # ¯\_(ツ)_/¯
+      uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
         fail_on_unmatched_files: true
