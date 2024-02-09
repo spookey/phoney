@@ -68,6 +68,16 @@ export default {
           `whatsapp://send?phone=${this.countryCallingCode}${this.nationalNumber}`,
         ),
         make(
+          'SIP',
+          'fa-solid fa-phone-flip',
+          `sip:${this.number}`,
+        ),
+        make(
+          'Signal',
+          'fa-brands fa-signal-messenger',
+          `sgnl://signal.me/#p/${this.number}`,
+        ),
+        make(
           'SMS',
           'fa-solid fa-sms',
           `sms:${this.number}`,

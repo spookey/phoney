@@ -2,11 +2,13 @@ import {
   faFax,
   faPaintBrush,
   faPhone,
+  faPhoneFlip,
   faSms,
   faTrash,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faSkype,
+  faSignalMessenger,
   faViber,
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
@@ -21,6 +23,8 @@ library.add(
   faFax,
   faPaintBrush,
   faPhone,
+  faPhoneFlip,
+  faSignalMessenger,
   faSkype,
   faSms,
   faTrash,
