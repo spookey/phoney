@@ -17,6 +17,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import { createApp } from 'vue';
+import settingsLoader from './settings';
 import App from './App.vue';
 
 library.add(
@@ -32,6 +33,9 @@ library.add(
   faWhatsapp,
 );
 
-createApp(App)
-  .component('FaIcon', FontAwesomeIcon)
-  .mount('#app');
+settingsLoader()
+  .then((settings) => createApp(App)
+    .component('FaIcon', FontAwesomeIcon)
+    .use(settings)
+    .mount('#app'))
+  .catch(console.error);

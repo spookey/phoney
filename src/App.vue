@@ -25,7 +25,6 @@ import {
 
 import ActionButtons from './components/ActionButtons.vue';
 import NumberEntry from './components/NumberEntry.vue';
-import conf from './conf';
 
 export default {
   name: 'App',
@@ -71,7 +70,7 @@ export default {
         getCountryCallingCode(country);
         return country;
       } catch (ex) {
-        return conf.defaultCountry;
+        return this.$conf.defaultCountry;
       }
     },
     enteredCountry(value) {

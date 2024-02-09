@@ -59,8 +59,6 @@ import {
   getCountryCallingCode,
 } from 'libphonenumber-js/mobile';
 
-import conf from '../conf';
-
 export default {
   name: 'NumberEntry',
   props: {
@@ -96,7 +94,7 @@ export default {
       return elems;
     },
     errorClass() {
-      return this.isValid ? '' : conf.errorClass;
+      return this.isValid ? '' : this.$conf.errorClass;
     },
     theIcon() {
       if (this.isValid) { return 'fa-solid fa-trash'; }
