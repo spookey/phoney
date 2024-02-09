@@ -7,8 +7,8 @@ import {
   faTrash,
 } from '@fortawesome/free-solid-svg-icons';
 import {
-  faSkype,
   faSignalMessenger,
+  faSkype,
   faViber,
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
