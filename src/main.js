@@ -9,6 +9,7 @@ import {
 import {
   faSignalMessenger,
   faSkype,
+  faTelegram,
   faViber,
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
@@ -28,6 +29,7 @@ library.add(
   faSignalMessenger,
   faSkype,
   faSms,
+  faTelegram,
   faTrash,
   faViber,
   faWhatsapp,

@@ -94,6 +94,11 @@ export default {
           'fa-solid fa-sms',
           `sms:${this.number}`,
         ),
+        telegram: make(
+          'Telegram',
+          'fa-brands fa-telegram',
+          `tg://resolve?phone=${this.countryCallingCode}${this.nationalNumber}`,
+        ),
         viber: make(
           'Viber',
           'fa-brands fa-viber',

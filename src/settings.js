@@ -7,7 +7,7 @@ export default (name) => {
       'phone', 'sip', 'sms', 'fax',
     ],
     buttonsRight: [
-      'whatsapp', 'signal', 'viber', 'skype',
+      'whatsapp', 'telegram', 'signal', 'viber', 'skype',
     ],
     defaultCountry: 'NL',
   };
