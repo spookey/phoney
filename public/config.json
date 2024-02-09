@@ -1,4 +1,8 @@
 {
   "accentClass": "is-link",
+  "buttonsLeft": [
+  ],
+  "buttonsRight": [
+  ],
   "defaultCountry": "DE"
 }
