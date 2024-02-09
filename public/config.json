@@ -1,4 +1,4 @@
 {
-  "defaultCountry": "DE",
-  "errorClass": "is-link"
+  "accentClass": "is-link",
+  "defaultCountry": "DE"
 }

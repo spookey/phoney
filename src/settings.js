@@ -1,7 +1,7 @@
 export default (name) => {
   const defaults = {
+    accentClass: 'is-danger',
     defaultCountry: 'NL',
-    errorClass: 'is-danger',
   };
 
   return fetch(process.env.BASE_URL + (name || 'config.json'))

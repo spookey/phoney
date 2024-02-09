@@ -4,7 +4,7 @@
       <div class="control">
         <span
           class="select is-medium"
-          :class="errorClass"
+          :class="accentClass"
         >
           <label for="country-select">
             <select
@@ -26,7 +26,7 @@
         <label for="number-input">
           <input
             class="input is-medium"
-            :class="errorClass"
+            :class="accentClass"
             placeholder="number"
             type="tel"
             ref="numberInput"
@@ -38,7 +38,7 @@
       <div class="control">
         <div
           class="button is-medium"
-          :class="errorClass"
+          :class="accentClass"
           @click="theClick"
           @keyup="theClick"
         >
@@ -93,8 +93,8 @@ export default {
       elems.sort((aa, zz) => aa.label >= zz.label);
       return elems;
     },
-    errorClass() {
-      return this.isValid ? '' : this.$conf.errorClass;
+    accentClass() {
+      return this.isValid ? '' : this.$conf.accentClass;
     },
     theIcon() {
       if (this.isValid) { return 'fa-solid fa-trash'; }
