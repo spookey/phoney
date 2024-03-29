@@ -6,9 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "release-patch": "yarn version --patch",
-    "release-minor": "yarn version --minor",
-    "release-major": "yarn version --major"
+    "release-patch": "npm version patch",
+    "release-minor": "npm version minor",
+    "release-major": "npm version major"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
