@@ -16,23 +16,23 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.6",
     "bulma": "^0.9.4",
-    "core-js": "^3.35.1",
-    "libphonenumber-js": "^1.10.55",
-    "vue": "^3.4.18"
+    "core-js": "^3.36.1",
+    "libphonenumber-js": "^1.10.59",
+    "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.23.10",
+    "@babel/eslint-parser": "^7.24.1",
     "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-plugin-eslint": "~5.0.8",
     "@vue/cli-service": "~5.0.8",
     "@vue/eslint-config-airbnb": "^8.0.0",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-vue": "^9.21.1",
+    "eslint-plugin-vue": "^9.24.0",
     "eslint-plugin-vuejs-accessibility": "^2.2.1",
     "glob-all": "^3.3.1",
-    "purgecss-webpack-plugin": "^5.0.0",
-    "sass": "^1.70.0",
-    "sass-loader": "^14.1.0"
+    "purgecss-webpack-plugin": "^6.0.0",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1"
   }
 }
