@@ -1,20 +1,26 @@
 <template>
-  <div>
-    <NumberEntry
-      :entryCountry="country || entryCountry"
-      :entryNumber="number || entryNumber"
-      :isValid="isValid"
-      @enteredCountry="enteredCountry"
-      @enteredNumber="enteredNumber"
-    />
-    <ActionButtons
-      :isValid="isValid"
-      :country="country || ''"
-      :countryCallingCode="countryCallingCode || ''"
-      :number="number || ''"
-      :nationalNumber="nationalNumber || ''"
-    />
-  </div>
+  <section class="section">
+    <div class="container">
+      <NumberEntry
+        :entryCountry="country || entryCountry"
+        :entryNumber="number || entryNumber"
+        :isValid="isValid"
+        @enteredCountry="enteredCountry"
+        @enteredNumber="enteredNumber"
+      />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <ActionButtons
+        :isValid="isValid"
+        :country="country || ''"
+        :countryCallingCode="countryCallingCode || ''"
+        :number="number || ''"
+        :nationalNumber="nationalNumber || ''"
+      />
+    </div>
+  </section>
 </template>
 
 <script>
