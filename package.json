@@ -11,28 +11,28 @@
     "release-major": "npm version major"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.2",
-    "@fortawesome/free-brands-svg-icons": "^6.5.2",
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/vue-fontawesome": "^3.0.6",
-    "bulma": "^1.0.0",
-    "core-js": "^3.37.0",
-    "libphonenumber-js": "^1.10.61",
-    "vue": "^3.4.26"
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "bulma": "^1.0.2",
+    "core-js": "^3.38.1",
+    "libphonenumber-js": "^1.11.7",
+    "vue": "^3.4.38"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.24.5",
+    "@babel/eslint-parser": "^7.25.1",
     "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-plugin-eslint": "~5.0.8",
     "@vue/cli-service": "~5.0.8",
     "@vue/eslint-config-airbnb": "^8.0.0",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-vue": "^9.25.0",
-    "eslint-plugin-vuejs-accessibility": "^2.3.0",
+    "eslint-plugin-vue": "^9.27.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "glob-all": "^3.3.1",
     "purgecss-webpack-plugin": "^6.0.0",
-    "sass": "^1.76.0",
-    "sass-loader": "^14.2.1"
+    "sass": "^1.77.8",
+    "sass-loader": "^16.0.1"
   }
 }
