@@ -8,7 +8,7 @@ export default [
       '**/dist/*',
     ],
   },
-  ...eslintPluginVue.configs['flat/essential'],
+  ...eslintPluginVue.configs['flat/essential', 'flat/recommended'],
   js.configs.recommended,
   eslintConfigPrettier,
   {
