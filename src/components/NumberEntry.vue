@@ -7,9 +7,7 @@
           :class="accentClass"
         >
           <label for="country-select">
-            <select
-              @change="enteredCountry"
-            >
+            <select @change="enteredCountry">
               <option
                 v-for="opt in countryOptions"
                 :key="opt.value"
@@ -43,9 +41,7 @@
           @keyup="theClick"
         >
           <span class="icon is-small">
-            <FaIcon
-              :icon="theIcon"
-            />
+            <FaIcon :icon="theIcon" />
           </span>
         </div>
       </div>
@@ -54,10 +50,7 @@
 </template>
 
 <script>
-import {
-  getCountries,
-  getCountryCallingCode,
-} from 'libphonenumber-js/mobile';
+import { getCountries, getCountryCallingCode } from 'libphonenumber-js/mobile';
 
 export default {
   name: 'NumberEntry',
@@ -82,7 +75,9 @@ export default {
     countryOptions() {
       const makeLabel = (cty) => {
         const pre = `+${getCountryCallingCode(cty)}`;
-        if (this.labelByCountry) { return `${cty} (${pre})`; }
+        if (this.labelByCountry) {
+          return `${cty} (${pre})`;
+        }
         return `${pre} (${cty})`;
       };
       const elems = getCountries().map((country) => ({
@@ -97,7 +92,9 @@ export default {
       return this.isValid ? '' : this.$conf.accentClass;
     },
     theIcon() {
-      if (this.isValid) { return 'fa-solid fa-trash'; }
+      if (this.isValid) {
+        return 'fa-solid fa-trash';
+      }
       return 'fa-solid fa-paint-brush';
     },
   },

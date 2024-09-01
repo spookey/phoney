@@ -19,9 +19,7 @@
               rel="noopener noreferrer"
             >
               <span class="icon is-small">
-                <FaIcon
-                  :icon="elem.icon"
-                />
+                <FaIcon :icon="elem.icon" />
               </span>
               <span>
                 {{ elem.text }}
@@ -64,36 +62,16 @@ export default {
       const make = (text, icon, href) => ({ text, icon, href });
 
       return {
-        fax: make(
-          'Fax',
-          'fa-solid fa-fax',
-          `fax:${this.number}`,
-        ),
-        phone: make(
-          'Phone',
-          'fa-solid fa-phone',
-          `tel:${this.number}`,
-        ),
+        fax: make('Fax', 'fa-solid fa-fax', `fax:${this.number}`),
+        phone: make('Phone', 'fa-solid fa-phone', `tel:${this.number}`),
         signal: make(
           'Signal',
           'fa-brands fa-signal-messenger',
           `sgnl://signal.me/#p/${this.number}`,
         ),
-        sip: make(
-          'SIP',
-          'fa-solid fa-phone-flip',
-          `sip:${this.number}`,
-        ),
-        skype: make(
-          'Skype',
-          'fa-brands fa-skype',
-          `skype:${this.number}`,
-        ),
-        sms: make(
-          'SMS',
-          'fa-solid fa-sms',
-          `sms:${this.number}`,
-        ),
+        sip: make('SIP', 'fa-solid fa-phone-flip', `sip:${this.number}`),
+        skype: make('Skype', 'fa-brands fa-skype', `skype:${this.number}`),
+        sms: make('SMS', 'fa-solid fa-sms', `sms:${this.number}`),
         telegram: make(
           'Telegram',
           'fa-brands fa-telegram',
@@ -114,11 +92,11 @@ export default {
   },
   methods: {
     buttons(names) {
-      if (!this.isValid) { return []; }
+      if (!this.isValid) {
+        return [];
+      }
 
-      return names
-        .map((name) => this.defined[name])
-        .filter((button) => !!button);
+      return names.map((name) => this.defined[name]).filter((button) => !!button);
     },
   },
 };

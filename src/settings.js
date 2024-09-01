@@ -3,12 +3,8 @@ const ldef = (lst, def) => (!!lst && lst.length ? lst : def);
 export default (name) => {
   const defaults = {
     accentClass: 'is-danger',
-    buttonsLeft: [
-      'phone', 'sip', 'sms', 'fax',
-    ],
-    buttonsRight: [
-      'whatsapp', 'telegram', 'signal', 'viber', 'skype',
-    ],
+    buttonsLeft: ['phone', 'sip', 'sms', 'fax'],
+    buttonsRight: ['whatsapp', 'telegram', 'signal', 'viber', 'skype'],
     defaultCountry: 'NL',
   };
 

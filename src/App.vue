@@ -24,10 +24,7 @@
 </template>
 
 <script>
-import {
-  getCountryCallingCode,
-  parsePhoneNumber,
-} from 'libphonenumber-js/mobile';
+import { getCountryCallingCode, parsePhoneNumber } from 'libphonenumber-js/mobile';
 
 import ActionButtons from './components/ActionButtons.vue';
 import NumberEntry from './components/NumberEntry.vue';
@@ -47,7 +44,8 @@ export default {
     object() {
       try {
         return parsePhoneNumber(this.entryNumber, {
-          defaultCountry: this.entryCountry, extract: true,
+          defaultCountry: this.entryCountry,
+          extract: true,
         });
       } catch (ex) {
         return null;
@@ -83,7 +81,7 @@ export default {
       this.entryCountry = this.validCountry(value);
     },
     enteredNumber(value) {
-      this.entryNumber = (value || '');
+      this.entryNumber = value || '';
     },
   },
   created() {
@@ -95,5 +93,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "bulma/bulma.scss";
+@import 'bulma/bulma.scss';
 </style>
