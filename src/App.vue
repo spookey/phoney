@@ -68,6 +68,11 @@ export default {
       return this.isValid ? this.object.nationalNumber : null;
     },
   },
+  created() {
+    const params = new URLSearchParams(window.location.search);
+    this.enteredCountry(params.get('c'));
+    this.enteredNumber(params.get('n'));
+  },
   methods: {
     validCountry(value) {
       try {
@@ -85,11 +90,6 @@ export default {
     enteredNumber(value) {
       this.entryNumber = value || '';
     },
-  },
-  created() {
-    const params = new URLSearchParams(window.location.search);
-    this.enteredCountry(params.get('c'));
-    this.enteredNumber(params.get('n'));
   },
 };
 </script>

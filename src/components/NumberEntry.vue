@@ -98,6 +98,9 @@ export default {
       return 'fa-solid fa-paint-brush';
     },
   },
+  mounted() {
+    this.$refs.numberInput.focus();
+  },
   methods: {
     emitEnteredNumber(value) {
       this.$emit('enteredNumber', value);
@@ -115,9 +118,6 @@ export default {
         this.labelByCountry = !this.labelByCountry;
       }
     },
-  },
-  mounted() {
-    this.$refs.numberInput.focus();
   },
 };
 </script>
