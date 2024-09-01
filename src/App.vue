@@ -2,22 +2,22 @@
   <section class="section">
     <div class="container">
       <NumberEntry
-        :entryCountry="country || entryCountry"
-        :entryNumber="number || entryNumber"
-        :isValid="isValid"
-        @enteredCountry="enteredCountry"
-        @enteredNumber="enteredNumber"
+        :entry-country="country || entryCountry"
+        :entry-number="number || entryNumber"
+        :is-valid="isValid"
+        @entered-country="enteredCountry"
+        @entered-number="enteredNumber"
       />
     </div>
   </section>
   <section class="section">
     <div class="container">
       <ActionButtons
-        :isValid="isValid"
+        :is-valid="isValid"
         :country="country || ''"
-        :countryCallingCode="countryCallingCode || ''"
+        :country-calling-code="countryCallingCode || ''"
         :number="number || ''"
-        :nationalNumber="nationalNumber || ''"
+        :national-number="nationalNumber || ''"
       />
     </div>
   </section>
