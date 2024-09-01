@@ -68,6 +68,7 @@ export default {
       required: true,
     },
   },
+  emits: ['enteredCountry', 'enteredNumber'],
   data: () => ({
     labelByCountry: true,
   }),
