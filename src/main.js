@@ -18,7 +18,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import { createApp } from 'vue';
-import settingsLoader from './settings';
+import settingsLoader from './settings.js';
 import App from './App.vue';
 
 library.add(

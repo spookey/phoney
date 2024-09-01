@@ -12,7 +12,7 @@ export default (name) => {
     defaultCountry: 'NL',
   };
 
-  return fetch(process.env.BASE_URL + (name || 'config.json'))
+  return fetch(import.meta.env.BASE_URL + (name || 'config.json'))
     .then((res) => res.json())
     .then((data) => ({
       install(app) {
