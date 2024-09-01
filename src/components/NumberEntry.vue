@@ -23,11 +23,11 @@
       <div class="control is-expanded">
         <label for="number-input">
           <input
+            ref="numberInput"
             class="input is-medium"
             :class="accentClass"
             placeholder="number"
             type="tel"
-            ref="numberInput"
             :value="entryNumber"
             @input="enteredNumber"
           />

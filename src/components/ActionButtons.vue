@@ -2,15 +2,15 @@
   <div class="content">
     <div class="columns is-mobile">
       <div
-        class="column is-half"
         v-for="names in [$conf.buttonsLeft, $conf.buttonsRight]"
         :key="names"
+        class="column is-half"
       >
         <div class="columns is-mobile is-multiline">
           <div
-            class="column is-full"
             v-for="elem in buttons(names)"
             :key="elem.text"
+            class="column is-full"
           >
             <a
               class="button is-medium is-fullwidth"
