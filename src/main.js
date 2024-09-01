@@ -39,5 +39,4 @@ settingsLoader()
   .then((settings) =>
     createApp(App).component('FaIcon', FontAwesomeIcon).use(settings).mount('#app'),
   )
-  // eslint-disable-next-line
   .catch(console.error);

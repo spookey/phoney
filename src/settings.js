@@ -12,7 +12,6 @@ export default (name) => {
     .then((res) => res.json())
     .then((data) => ({
       install(app) {
-        // eslint-disable-next-line no-param-reassign
         app.config.globalProperties.$conf = {
           ...defaults,
           ...data,

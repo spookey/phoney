@@ -47,6 +47,7 @@ export default {
           defaultCountry: this.entryCountry,
           extract: true,
         });
+        // eslint-disable-next-line no-unused-vars
       } catch (ex) {
         return null;
       }
@@ -73,6 +74,7 @@ export default {
         const country = value.toUpperCase();
         getCountryCallingCode(country);
         return country;
+        // eslint-disable-next-line no-unused-vars
       } catch (ex) {
         return this.$conf.defaultCountry;
       }
