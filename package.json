@@ -9,7 +9,6 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "serve": "vue-cli-service serve",
     "release-patch": "npm version patch",
     "release-minor": "npm version minor",
     "release-major": "npm version major"
