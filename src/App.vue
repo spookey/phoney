@@ -95,5 +95,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'bulma/bulma.scss';
+@use 'bulma/bulma.scss';
 </style>
